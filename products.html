@@ -24,50 +24,113 @@
 				</div>
 			</div>	
 
-				<input type="button" class="button1" value="Helado" id="myButton" onclick="iter_onclick_ice()">
-				<input type="button" class="button2" value="Dona" id="myButton" onclick="iter_onclick_donut()">
+				<input type="button" class="button1" value="Helado" id="myButton" onclick="iter_onclick_ice(), iter_onclick_name_ice()">
+				<input type="button" class="button2" value="Dona" id="myButton" onclick="iter_onclick_donut(), iter_onclick_name_donut()">
 				
 				<div id="donut"></div>
 				<p id="qArray"></p>
+				
 
-				<script>
-			        var qArray = ["pink","purple"]; 
-			        var donut = ["chocolate","mocca","strawberry"]
+			<div class="box">
+				<div class="title2">
+					<h2 id="nomHelado"></h2>				
+				</div>
+			</div>
 
-			        var index = 0;
+			<div class="box">
+				<div class="title3">
+					<h2 id="nomDona"></h2>
+				</div>
+			</div>
 
-			        function iter_onclick_ice() {
-			            //if this is the last question hide and displays quiz ends            
-			            if (index >= qArray.length) {
-			                
-			                index = 0;
+			<div class="box">
+				<div class="tabla">
+					<h1>HELADOS</h1>
+					<h2>1) Fresa</h2>
+					<h2>2) Frambuesa</h2>
+					<h2>3) Coco</h2>
+					<h2>4) Cafe</h2>
+					<h2>5) Chocolate</h2>
+					<h2>6) Queso</h2>
+				</div>
+			</div>
 
-			            }
-
-			            var html = ' <div class="helado" id="helado"> <img src="img/ice_cream_' + qArray[index] + '.png"> </div>'
-			            
-			            document.getElementById('qArray').innerHTML = html;
-
-			            index++;
-			        }
-
-			        function iter_onclick_donut() {
-			            //if this is the last question hide and displays quiz ends            
-			            if (index >= donut.length) {
-			                
-			                index = 0;
-
-			            }
-
-			            var html = ' <div class="donut" id="donut"> <img src="img/donut_' + donut[index] + '.png"> </div>'
-			            
-			            document.getElementById('donut').innerHTML = html;
-
-			            index++;
-			        }
+			<div class="box">
+				<div class="tabla2">
+					<h1>DONAS</h1>
+					<h2>1) Chcolate con chispas de sabores </h2>
+					<h2>2) Mocca con chispas de chocolate</h2>
+					<h2>3) Strawberry</h2>
+					<h2>4) Cubierta de chocolate</h2>
+					<h2>5) Chocolate</h2>
+					<h2>6) Cubierta de Mocca</h2>
+				</div>
+			</div>
 
 
-			     </script>
+			<script>
+				var nHelado = ["pink","purple","coco","coffee","chocolate","cheese"];
+				var ndonut  =  ["chocolate","mocca","strawberry","CHOCOM", "chocolate2","mocca2"];
+				var nombre 
+				var index1=0; 
+				var index2=0;
+								
+
+				function iter_onclick_name_ice() {
+			            //if this is the last question hide and displays quiz ends 
+			             
+			            nHelado.innerHTML = index1;
+						nHelado=document.getElementById("nomHelado");
+
+			            if(index1 >= nHelado.length){
+			            	index1 = 0;
+			            }else{
+			            	index1++;
+			            }    
+				}
+
+			    function iter_onclick_name_donut() {
+			            //if this is the last question hide and displays quiz ends 
+			          	            
+			            if (index2 >= ndonut.length) {                
+			                index2 = 0;
+			            } 		    
+
+						ndonut.innerHTML = index2;
+						ndonut=document.getElementById("nomDona");							 			            
+			            index2++;			            
+			    }
+
+			</script>
+			
+
+					<script>
+				        var qArray = [" ", "pink","purple","coco","coffee","chocolate", "cheese"]; 
+				        var donut = [" ", "chocolate","mocca","strawberry","CHOCOM", "chocolate2", "mocca2"]
+
+				        
+				        var index = 0;
+
+				        function iter_onclick_ice() {
+				            //if this is the last question hide and displays quiz ends            
+				            if (index >= qArray.length) {                
+				                index = 0;
+				            }
+				            var html = ' <div class="helado" id="helado"> <img src="img/ice_cream_' + qArray[index] + '.png"> </div>'          
+				            document.getElementById('qArray').innerHTML = html;
+				            index++;
+				        }
+
+				        function iter_onclick_donut() {
+				            //if this is the last question hide and displays quiz ends            
+				            if (index >= donut.length) {                
+				                index = 0;
+				            }
+				            var html = ' <div class="donut" id="donut"> <img src="img/donut_' + donut[index] + '.png"> </div>'			            
+				            document.getElementById('donut').innerHTML = html;
+				            index++;
+				        }  
+				    </script>
 		</div>		
 	</header>
 </body>

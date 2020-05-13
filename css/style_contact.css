@@ -10,7 +10,7 @@ html {
 
 header{
 	background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../img/background.png);
-	height: 100vh;
+	height: 150vh;
 	background-size: cover;
 	background-position: center;
 	margin: 20px;
@@ -63,26 +63,100 @@ ul li.Cont a{
 
 .title{
 	position: absolute;
-	top: 350px;
+	top: 450px;
 	left: 50%;
 	transform: translate(-50%,-50%);
 	margin: 10px;
 	background-color: #ffffff;
-	border: 20px solid black;
+	border: 10px solid black;
 	opacity: 0.6;
+	height: 500px;
+	width: 1000px;
 }
 
 
 .title h1{
-	margin: 10%;
+	margin: 10px;
+	text-align: left;
+	padding-left: 10px;
   	font-weight: bold;
 	color: #000;
-	font-size: 75px;
+	font-size: 35px;
 }
 
 .title h2{
-	margin: 10%;
+	text-align: left;
+	margin: 50px;
+	padding-left: 15px;
  	font-weight: bold;
 	color: #000;
 	font-size: 20px;
+}
+
+.WA img{
+	float: left;
+	width: 100px;
+	height: auto;
+	margin-left: 90px;
+	margin-top: 800px;
+}
+
+.FB img{
+	float: left;
+	width: 110px;
+	height: auto;
+	margin-left: 110px;
+	margin-top: 810px;
+}
+
+.IG img{
+	float: left;
+	width: 100px;
+	height: auto;
+	margin-left: 130px;
+	margin-top: 800px;
+}
+
+.TW img{
+	float: left;
+	width: 100px;
+	height: auto;
+	margin-left: 120px;
+	margin-top: 755px;
+}
+
+.HIPWA{
+	position: absolute;
+	font-weight: bold;
+	top: 945px;
+	left: 320px;
+	color: #000;
+	font-size: 20px;	
+}
+
+.HIPFB{
+	position: absolute;
+	font-weight: bold;
+	top: 945px;
+	left: 530px;
+	color: #000;
+	font-size: 20px;	
+}
+
+.HIPIG{
+	position: absolute;
+	font-weight: bold;
+	top: 945px;
+	left: 758px;
+	color: #000;
+	font-size: 20px;	
+}
+
+.HIPTW{
+	position: absolute;
+	font-weight: bold;
+	top: 945px;
+	left: 1000px;
+	color: #000;
+	font-size: 20px;	
 }
